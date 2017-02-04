@@ -212,11 +212,15 @@ function accountDelete(e) {
 
 function randomId() {
   var random = Math.floor(Math.random() * (999 - 100) + 100);
-  for (var i = 0; i < accounts.length; i++) {
-    if (random === accounts[i].id) {
-      randomId();
-    } else {
-      return random;
+  if (accounts.length === 0) {
+    return random;
+  } else {
+    for (var i = 0; i < accounts.length; i++) {
+      if (random === accounts[i].id) {
+        randomId();
+      } else {
+        return random;
+      }
     }
   }
 }
