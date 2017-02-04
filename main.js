@@ -8,6 +8,7 @@ window.addEventListener('load', allAccounts);
 var main = document.getElementsByTagName('main')[0];
 var navButtons = document.getElementsByClassName('navbtn');
 var subtitle = document.getElementsByTagName('h2')[0];
+subtitle.innerHTML = 'All accounts';
 
 // Other variables
 var accounts = [];
