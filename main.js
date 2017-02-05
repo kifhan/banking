@@ -41,7 +41,7 @@ function createPage(e) {
 
 function allAccounts() {
   var mainInner =
-    `<table class="table">
+    `<table class="table table-hover">
       <thead>
         <tr>
           <th>Id</th>
@@ -82,7 +82,7 @@ function addAccount() {
     <option value="MasterCard">MasterCard</option>
     <option value="Dina">Dina</option>
   </select><br>
-  <input type="submit" class="form-control" value="Submit new account">
+  <input type="submit" class="form-control btn btn-info" value="Submit new account">
   `;
   main.innerHTML = mainInner;
   selectSubmit(newAccount);
@@ -113,8 +113,8 @@ function editAccounts() {
             <td>${accounts[i].lastname}</td>
             <td>${accounts[i].deposit}</td>
             <td>${accounts[i].creditcard}</td>
-            <td><input type="button" class="btn btn-default edit" value="Edit"></td>
-            <td><input type="button" class="btn btn-default delete" value="Delete"></td>
+            <td><input type="button" class="btn btn-info edit btn-xs" value="Edit"></td>
+            <td><input type="button" class="btn btn-danger delete btn-xs" value="Delete"></td>
           </tr>
       `;
   }
@@ -156,7 +156,7 @@ function accountEdit(e) {
         <option value="MasterCard">MasterCard</option>
         <option value="Dina">Dina</option>
       </select><br>
-      <input type="submit" class="form-control" value="Update account">
+      <input type="submit" class="form-control btn btn-info" value="Update account">
       `;
       main.innerHTML = mainInner;
       var options = document.getElementsByTagName('option');
@@ -248,3 +248,12 @@ function newAccount() {
 function updateLocalStorage(data) {
   localStorage['Accounts'] = JSON.stringify(data);
 }
+
+console.log(
+  `
+  ************************
+    Thanks for your visit :)
+      Stefan Milivojević
+      ************************
+  `
+);
